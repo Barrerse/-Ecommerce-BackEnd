@@ -24,7 +24,7 @@ Product.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
         isDecimal: true,
@@ -41,7 +41,7 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: Category,
+        model: 'category',
         key: 'id',
       },
     },
@@ -54,15 +54,5 @@ Product.init(
     modelName: 'product',
   }
 );
-
-// Define associations
-Product.belongsTo(Category, {
-  foreignKey: 'category_id',
-});
-
-Product.belongsToMany(Tag, {
-  through: ProductTag,
-  foreignKey: 'product_id',
-});
 
 module.exports = Product;
