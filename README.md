@@ -102,6 +102,7 @@ DELTE route used
 Video Walkthrough
 ------------
 
+https://youtu.be/Jigo3qVPKhU
 
 Contributions
 -------------
